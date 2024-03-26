@@ -1,0 +1,214 @@
+#pragma version 8
+intcblock 0 1
+bytecblock 0x 0x6f7267616e697a6174696f6e 0x6361757365 0x63757272656e746c795f726169736564 0x7761676572 0x646f6e6f72
+txn NumAppArgs
+intc_0 // 0
+==
+bnz main_l6
+txna ApplicationArgs 0
+pushbytes 0x8d284f79 // "set_up_fundraiser(uint64,string)void"
+==
+bnz main_l5
+txna ApplicationArgs 0
+pushbytes 0x081c0213 // "donate(pay)string"
+==
+bnz main_l4
+err
+main_l4:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub donatecaster_5
+intc_1 // 1
+return
+main_l5:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub setupfundraisercaster_4
+intc_1 // 1
+return
+main_l6:
+txn OnCompletion
+intc_0 // NoOp
+==
+bnz main_l10
+txn OnCompletion
+intc_1 // OptIn
+==
+bnz main_l9
+err
+main_l9:
+txn ApplicationID
+intc_0 // 0
+!=
+assert
+callsub optin_1
+intc_1 // 1
+return
+main_l10:
+txn ApplicationID
+intc_0 // 0
+==
+assert
+callsub create_0
+intc_1 // 1
+return
+
+// create
+create_0:
+proto 0 0
+bytec_2 // "cause"
+bytec_0 // ""
+app_global_put
+bytec_3 // "currently_raised"
+intc_0 // 0
+app_global_put
+bytec 5 // "donor"
+bytec_0 // ""
+app_global_put
+bytec_1 // "organization"
+bytec_0 // ""
+app_global_put
+bytec 4 // "wager"
+intc_0 // 0
+app_global_put
+retsub
+
+// opt_in
+optin_1:
+proto 0 0
+bytec_1 // "organization"
+app_global_get
+bytec_0 // ""
+==
+bnz optin_1_l4
+bytec 4 // "wager"
+app_global_get
+intc_0 // 0
+!=
+bnz optin_1_l3
+intc_0 // 0
+return
+optin_1_l3:
+bytec 5 // "donor"
+txn Sender
+app_global_put
+b optin_1_l5
+optin_1_l4:
+bytec_1 // "organization"
+txn Sender
+app_global_put
+optin_1_l5:
+retsub
+
+// set_up_fundraiser
+setupfundraiser_2:
+proto 2 0
+txn Sender
+global CurrentApplicationID
+app_opted_in
+// unauthorized
+assert
+txn Sender
+bytec_1 // "organization"
+app_global_get
+==
+assert
+bytec 4 // "wager"
+frame_dig -2
+app_global_put
+bytec_2 // "cause"
+frame_dig -1
+extract 2 0
+app_global_put
+retsub
+
+// donate
+donate_3:
+proto 1 1
+bytec_0 // ""
+txn Sender
+global CurrentApplicationID
+app_opted_in
+// unauthorized
+assert
+bytec_2 // "cause"
+app_global_get
+bytec_0 // ""
+!=
+assert
+intc_1 // pay
+intc_1 // pay
+==
+assert
+frame_dig -1
+gtxns Receiver
+global CurrentApplicationAddress
+==
+assert
+bytec_3 // "currently_raised"
+bytec_3 // "currently_raised"
+app_global_get
+frame_dig -1
+gtxns Amount
++
+app_global_put
+pushbytes 0x4876616c612056616d206e6120646f6e6163696a69 // "Hvala Vam na donaciji"
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+retsub
+
+// set_up_fundraiser_caster
+setupfundraisercaster_4:
+proto 0 0
+intc_0 // 0
+bytec_0 // ""
+txna ApplicationArgs 1
+btoi
+frame_bury 0
+txna ApplicationArgs 2
+frame_bury 1
+frame_dig 0
+frame_dig 1
+callsub setupfundraiser_2
+retsub
+
+// donate_caster
+donatecaster_5:
+proto 0 0
+bytec_0 // ""
+intc_0 // 0
+txn GroupIndex
+intc_1 // 1
+-
+frame_bury 1
+frame_dig 1
+gtxns TypeEnum
+intc_1 // pay
+==
+assert
+frame_dig 1
+callsub donate_3
+frame_bury 0
+pushbytes 0x151f7c75 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub

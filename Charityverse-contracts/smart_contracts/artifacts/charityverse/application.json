@@ -1,0 +1,103 @@
+{
+    "hints": {
+        "set_up_fundraiser(uint64,string)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "donate(pay)string": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        }
+    },
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMQpieXRlY2Jsb2NrIDB4IDB4NmY3MjY3NjE2ZTY5N2E2MTc0Njk2ZjZlIDB4NjM2MTc1NzM2NSAweDYzNzU3MjcyNjU2ZTc0NmM3OTVmNzI2MTY5NzM2NTY0IDB4Nzc2MTY3NjU3MiAweDY0NmY2ZTZmNzIKdHhuIE51bUFwcEFyZ3MKaW50Y18wIC8vIDAKPT0KYm56IG1haW5fbDYKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHg4ZDI4NGY3OSAvLyAic2V0X3VwX2Z1bmRyYWlzZXIodWludDY0LHN0cmluZyl2b2lkIgo9PQpibnogbWFpbl9sNQp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDA4MWMwMjEzIC8vICJkb25hdGUocGF5KXN0cmluZyIKPT0KYm56IG1haW5fbDQKZXJyCm1haW5fbDQ6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgZG9uYXRlY2FzdGVyXzUKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDU6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgc2V0dXBmdW5kcmFpc2VyY2FzdGVyXzQKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDY6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KYm56IG1haW5fbDEwCnR4biBPbkNvbXBsZXRpb24KaW50Y18xIC8vIE9wdEluCj09CmJueiBtYWluX2w5CmVycgptYWluX2w5Ogp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQphc3NlcnQKY2FsbHN1YiBvcHRpbl8xCmludGNfMSAvLyAxCnJldHVybgptYWluX2wxMDoKdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKPT0KYXNzZXJ0CmNhbGxzdWIgY3JlYXRlXzAKaW50Y18xIC8vIDEKcmV0dXJuCgovLyBjcmVhdGUKY3JlYXRlXzA6CnByb3RvIDAgMApieXRlY18yIC8vICJjYXVzZSIKYnl0ZWNfMCAvLyAiIgphcHBfZ2xvYmFsX3B1dApieXRlY18zIC8vICJjdXJyZW50bHlfcmFpc2VkIgppbnRjXzAgLy8gMAphcHBfZ2xvYmFsX3B1dApieXRlYyA1IC8vICJkb25vciIKYnl0ZWNfMCAvLyAiIgphcHBfZ2xvYmFsX3B1dApieXRlY18xIC8vICJvcmdhbml6YXRpb24iCmJ5dGVjXzAgLy8gIiIKYXBwX2dsb2JhbF9wdXQKYnl0ZWMgNCAvLyAid2FnZXIiCmludGNfMCAvLyAwCmFwcF9nbG9iYWxfcHV0CnJldHN1YgoKLy8gb3B0X2luCm9wdGluXzE6CnByb3RvIDAgMApieXRlY18xIC8vICJvcmdhbml6YXRpb24iCmFwcF9nbG9iYWxfZ2V0CmJ5dGVjXzAgLy8gIiIKPT0KYm56IG9wdGluXzFfbDQKYnl0ZWMgNCAvLyAid2FnZXIiCmFwcF9nbG9iYWxfZ2V0CmludGNfMCAvLyAwCiE9CmJueiBvcHRpbl8xX2wzCmludGNfMCAvLyAwCnJldHVybgpvcHRpbl8xX2wzOgpieXRlYyA1IC8vICJkb25vciIKdHhuIFNlbmRlcgphcHBfZ2xvYmFsX3B1dApiIG9wdGluXzFfbDUKb3B0aW5fMV9sNDoKYnl0ZWNfMSAvLyAib3JnYW5pemF0aW9uIgp0eG4gU2VuZGVyCmFwcF9nbG9iYWxfcHV0Cm9wdGluXzFfbDU6CnJldHN1YgoKLy8gc2V0X3VwX2Z1bmRyYWlzZXIKc2V0dXBmdW5kcmFpc2VyXzI6CnByb3RvIDIgMAp0eG4gU2VuZGVyCmdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25JRAphcHBfb3B0ZWRfaW4KLy8gdW5hdXRob3JpemVkCmFzc2VydAp0eG4gU2VuZGVyCmJ5dGVjXzEgLy8gIm9yZ2FuaXphdGlvbiIKYXBwX2dsb2JhbF9nZXQKPT0KYXNzZXJ0CmJ5dGVjIDQgLy8gIndhZ2VyIgpmcmFtZV9kaWcgLTIKYXBwX2dsb2JhbF9wdXQKYnl0ZWNfMiAvLyAiY2F1c2UiCmZyYW1lX2RpZyAtMQpleHRyYWN0IDIgMAphcHBfZ2xvYmFsX3B1dApyZXRzdWIKCi8vIGRvbmF0ZQpkb25hdGVfMzoKcHJvdG8gMSAxCmJ5dGVjXzAgLy8gIiIKdHhuIFNlbmRlcgpnbG9iYWwgQ3VycmVudEFwcGxpY2F0aW9uSUQKYXBwX29wdGVkX2luCi8vIHVuYXV0aG9yaXplZAphc3NlcnQKYnl0ZWNfMiAvLyAiY2F1c2UiCmFwcF9nbG9iYWxfZ2V0CmJ5dGVjXzAgLy8gIiIKIT0KYXNzZXJ0CmludGNfMSAvLyBwYXkKaW50Y18xIC8vIHBheQo9PQphc3NlcnQKZnJhbWVfZGlnIC0xCmd0eG5zIFJlY2VpdmVyCmdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCj09CmFzc2VydApieXRlY18zIC8vICJjdXJyZW50bHlfcmFpc2VkIgpieXRlY18zIC8vICJjdXJyZW50bHlfcmFpc2VkIgphcHBfZ2xvYmFsX2dldApmcmFtZV9kaWcgLTEKZ3R4bnMgQW1vdW50CisKYXBwX2dsb2JhbF9wdXQKcHVzaGJ5dGVzIDB4NDg3NjYxNmM2MTIwNTY2MTZkMjA2ZTYxMjA2NDZmNmU2MTYzNjk2YTY5IC8vICJIdmFsYSBWYW0gbmEgZG9uYWNpamkiCmZyYW1lX2J1cnkgMApmcmFtZV9kaWcgMApsZW4KaXRvYgpleHRyYWN0IDYgMApmcmFtZV9kaWcgMApjb25jYXQKZnJhbWVfYnVyeSAwCnJldHN1YgoKLy8gc2V0X3VwX2Z1bmRyYWlzZXJfY2FzdGVyCnNldHVwZnVuZHJhaXNlcmNhc3Rlcl80Ogpwcm90byAwIDAKaW50Y18wIC8vIDAKYnl0ZWNfMCAvLyAiIgp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmJ0b2kKZnJhbWVfYnVyeSAwCnR4bmEgQXBwbGljYXRpb25BcmdzIDIKZnJhbWVfYnVyeSAxCmZyYW1lX2RpZyAwCmZyYW1lX2RpZyAxCmNhbGxzdWIgc2V0dXBmdW5kcmFpc2VyXzIKcmV0c3ViCgovLyBkb25hdGVfY2FzdGVyCmRvbmF0ZWNhc3Rlcl81Ogpwcm90byAwIDAKYnl0ZWNfMCAvLyAiIgppbnRjXzAgLy8gMAp0eG4gR3JvdXBJbmRleAppbnRjXzEgLy8gMQotCmZyYW1lX2J1cnkgMQpmcmFtZV9kaWcgMQpndHhucyBUeXBlRW51bQppbnRjXzEgLy8gcGF5Cj09CmFzc2VydApmcmFtZV9kaWcgMQpjYWxsc3ViIGRvbmF0ZV8zCmZyYW1lX2J1cnkgMApwdXNoYnl0ZXMgMHgxNTFmN2M3NSAvLyAweDE1MWY3Yzc1CmZyYW1lX2RpZyAwCmNvbmNhdApsb2cKcmV0c3Vi",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
+    },
+    "state": {
+        "global": {
+            "num_byte_slices": 3,
+            "num_uints": 2
+        },
+        "local": {
+            "num_byte_slices": 0,
+            "num_uints": 0
+        }
+    },
+    "schema": {
+        "global": {
+            "declared": {
+                "cause": {
+                    "type": "bytes",
+                    "key": "cause",
+                    "descr": "Cause"
+                },
+                "currently_raised": {
+                    "type": "uint64",
+                    "key": "currently_raised",
+                    "descr": "Currently raised"
+                },
+                "donor": {
+                    "type": "bytes",
+                    "key": "donor",
+                    "descr": "Donor"
+                },
+                "organization": {
+                    "type": "bytes",
+                    "key": "organization",
+                    "descr": "Charity organization"
+                },
+                "wager": {
+                    "type": "uint64",
+                    "key": "wager",
+                    "descr": "Recources needed"
+                }
+            },
+            "reserved": {}
+        },
+        "local": {
+            "declared": {},
+            "reserved": {}
+        }
+    },
+    "contract": {
+        "name": "Charityverse",
+        "methods": [
+            {
+                "name": "set_up_fundraiser",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "amount"
+                    },
+                    {
+                        "type": "string",
+                        "name": "cause"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "donate",
+                "args": [
+                    {
+                        "type": "pay",
+                        "name": "payment"
+                    }
+                ],
+                "returns": {
+                    "type": "string"
+                }
+            }
+        ],
+        "networks": {},
+        "desc": "dApp for funding charitable causes"
+    },
+    "bare_call_config": {
+        "no_op": "CREATE",
+        "opt_in": "CALL"
+    }
+}

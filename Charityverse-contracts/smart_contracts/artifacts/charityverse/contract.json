@@ -1,0 +1,35 @@
+{
+    "name": "Charityverse",
+    "methods": [
+        {
+            "name": "set_up_fundraiser",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "amount"
+                },
+                {
+                    "type": "string",
+                    "name": "cause"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
+            "name": "donate",
+            "args": [
+                {
+                    "type": "pay",
+                    "name": "payment"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        }
+    ],
+    "networks": {},
+    "desc": "dApp for funding charitable causes"
+}
